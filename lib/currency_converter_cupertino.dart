@@ -1,23 +1,23 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
-class CurrencyConverterMaterialPage extends StatefulWidget {
-  const CurrencyConverterMaterialPage({super.key});
+class CurrencyConverterCupertinoPage extends StatefulWidget {
+  const CurrencyConverterCupertinoPage({super.key});
 
   @override
-  State<CurrencyConverterMaterialPage> createState() {
-    return _CurrencyConverterMaterialPageState();
-  }
+  State<CurrencyConverterCupertinoPage> createState() =>
+      _CurrencyConverterCupertinoPageState();
 }
 
-class _CurrencyConverterMaterialPageState
-    extends State<CurrencyConverterMaterialPage> {
-  double result = 0;
-  final TextEditingController textEditingController = TextEditingController();
+class _CurrencyConverterCupertinoPageState
+    extends State<CurrencyConverterCupertinoPage> {
+      double result = 0;
+      final TextEditingController textEditingController = TextEditingController();
 
-  void convert() {
+    void convert() {
     result = double.parse(textEditingController.text) * 35;
     setState(() {});
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -87,4 +87,6 @@ class _CurrencyConverterMaterialPageState
           ),
         ));
   }
+}
+
 }
